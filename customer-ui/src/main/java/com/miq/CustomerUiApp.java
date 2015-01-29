@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 @EnableDiscoveryClient
-public class CustomerApp {
+public class CustomerUiApp {
 
 	@Autowired
 	private DiscoveryClient discoveryClient;
 
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	public String sayCustomer() {
-		return "Hello Customer!";
+		return "Hello Customer UI!";
 	}
 
 	@RequestMapping("/url")
@@ -28,6 +28,6 @@ public class CustomerApp {
 	}
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(CustomerApp.class).web(true).run(args);
+		new SpringApplicationBuilder(CustomerUiApp.class).web(true).run(args);
 	}
 }

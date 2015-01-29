@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sowdri/spring-cloud-samples-config-repo
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    
